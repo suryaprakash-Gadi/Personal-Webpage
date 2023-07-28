@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       header.classList.toggle('active');
     };
     //something
-  
+    prompt("enter your name");
     alert("new line added here for found ghost ");
     window.onscroll = function () {
       menu.classList.remove('fa-times');
