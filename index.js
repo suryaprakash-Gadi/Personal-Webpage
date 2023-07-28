@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.classList.toggle('fa-times');
       header.classList.toggle('active');
     };
+    //something
   
     alert("new line added here for found ghost ");
     window.onscroll = function () {
