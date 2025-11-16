@@ -1,0 +1,78 @@
+
+/* Import Google Fonts - Placed after Tailwind directives for better override control if needed */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap');
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-primary-bg text-text-primary font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-accent-1 text-primary-bg;
+  }
+}
+
+/* Custom scrollbar (using your previous example) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-secondary-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-1 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-opacity-80;
+}
+
+/* For section transitions (using your previous example) */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* --- ADD THESE STYLES FOR CARD FLIP --- */
+.perspective {
+  perspective: 1000px; /* Creates the 3D space for children. Adjust value for more/less perspective. */
+}
+
+.experience-card-inner {
+  transform-style: preserve-3d; /* Allows children to be positioned in 3D space relative to this parent. */
+}
+
+.experience-card-front,
+.experience-card-back {
+  backface-visibility: hidden; /* Hides the back of the card when it's not facing the viewer. */
+  -webkit-backface-visibility: hidden; /* For Safari browser compatibility. */
+  /* Ensure transitions on transform if you want smoother manual flips, though Tailwind handles the main flip */
+  /* transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1); */ /* Example, already handled by Tailwind's duration class on inner div */
+}
+
+/* Utility for rotating Y - Tailwind's rotate-y-180 class should handle this,
+   but having it explicitly can be a fallback or for understanding.
+   Tailwind v3+ includes `rotate-y-180` by default.
+   If for some reason it's not working, this custom class can be used.
+   The Experience.jsx component uses Tailwind's `rotate-y-180` class.
+*/
+/*
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+*/
+/* --- END OF CARD FLIP STYLES --- */
+
+/* If you had animation-delay classes for blobs, they are not needed for this card flip version */
+/*
+.animation-delay-2000 {
+  animation-delay: 2000ms;
+}
+*/
