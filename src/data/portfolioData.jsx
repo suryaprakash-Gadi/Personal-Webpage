@@ -15,7 +15,7 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/suryaprakash-gadi",
   github: "https://github.com/suryaprakash-Gadi",
   leetcode: "https://leetcode.com/u/surya_gadi/",
-  resumeLink: "/public/SuryaPrakashGadiResume.pdf",
+  resumeLink: "/SuryaPrakashGadiResume.pdf",
   bio: "Backend-focused Software Developer with experience in Python, FastAPI, PostgreSQL, and multi-tenant SaaS architectures. Skilled in building scalable backend systems, real-time integrations, and full-stack applications.",
   shortBio: "I build scalable backend systems and full-stack applications."
 };
